@@ -90,7 +90,6 @@ gameController.addQuestion = async (req, res, next) => {
     }
   };
   const queryString = await questionAdder();
-  // console.log('AFter query function')
   const result = await db.query(queryString);
   const categoryId = result.rows[0][0];
   const questionObj = {
